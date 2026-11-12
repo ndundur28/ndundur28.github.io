@@ -49,10 +49,10 @@ body { margin: 0; background: #121010; overflow-x: hidden; }
 .badge svg { position:absolute; inset:0; animation:spin 18s linear infinite; }
 .badge .core { width:12px; height:12px; border-radius:50%; background:var(--blush-2); }
 .hero-foot { position:relative; z-index:3; display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:24px; margin-top:clamp(28px,5vh,56px); }
-.hero-foot .left { max-width:470px; }
+.hero-foot .left { max-width:600px; }
 .roles { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 18px; padding:0; list-style:none; }
 .roles li { font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; padding:7px 14px; border-radius:999px; border:1px solid var(--line-l); background:rgba(255,255,255,.06); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); }
-.hero-foot p { margin:0; font-size:clamp(15px,1.3vw,17px); color:rgba(244,235,229,.88); }
+.hero-foot p { margin:0; font-size:clamp(19px,1.9vw,26px); line-height:1.45; color:rgba(244,235,229,.88); }
 .linkbtn { display:inline-flex; align-items:center; gap:14px; text-decoration:none; color:var(--blush) !important; font-weight:600; font-size:14px; letter-spacing:.08em; text-transform:uppercase; }
 .linkbtn .circ { width:58px; height:58px; border-radius:50%; border:1.5px solid var(--blush-2); display:grid; place-items:center; transition:background .3s ease, transform .3s ease; }
 .linkbtn:hover .circ { background:var(--blush); color:var(--maroon); transform:rotate(-45deg); }
@@ -85,8 +85,6 @@ body { margin: 0; background: #121010; overflow-x: hidden; }
 
 /* tool grid (still) */
 .tool-grid { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); border-top:1px solid var(--line-l); border-left:1px solid var(--line-l); }
-.tool-grid li::before { content:attr(data-m); display:grid; place-items:center; width:38px; height:38px; margin-bottom:14px; border-radius:50%; border:1px solid var(--blush-2); font-size:13px; font-weight:700; color:var(--blush-2); transition:background .3s ease, color .3s ease; }
-.tool-grid li:hover::before { background:var(--blush); color:var(--maroon); border-color:var(--blush); }
 .tool-grid li { padding:22px 18px; border-right:1px solid var(--line-l); border-bottom:1px solid var(--line-l); font-weight:700; font-size:clamp(17px,1.6vw,21px); text-transform:uppercase; letter-spacing:-.01em; transition:background .3s ease; }
 .tool-grid li:hover { background:rgba(255,255,255,.06); }
 .tool-grid small { display:block; margin-top:4px; font-weight:400; font-size:12px; letter-spacing:.06em; color:rgba(244,235,229,.7); }
@@ -94,11 +92,10 @@ body { margin: 0; background: #121010; overflow-x: hidden; }
 /* stats */
 .stats { background:var(--blush); }
 .stats .wrap { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
-.stat { padding:clamp(36px,5vw,64px) 20px clamp(36px,5vw,64px) 0; border-right:1px solid var(--line); }
+.stat { padding:clamp(40px,5vw,64px) clamp(12px,1.6vw,24px); border-right:1px solid var(--line); text-align:center; display:flex; flex-direction:column; align-items:center; }
 .stat:last-child { border-right:none; }
-.stat .n { font-weight:900; font-size:clamp(46px,5.6vw,80px); line-height:.9; letter-spacing:-.05em; color:var(--maroon); }
-.stat .n sup { font-size:.4em; vertical-align:top; position:relative; top:.25em; }
-.stat .l { font-size:13px; color:var(--muted); margin-top:12px; max-width:20ch; }
+.stat .n { font-weight:800; font-size:clamp(40px,4.4vw,64px); line-height:1; letter-spacing:-.02em; color:var(--maroon); white-space:nowrap; }
+.stat .l { font-size:14px; line-height:1.55; color:var(--muted); margin-top:14px; max-width:22ch; }
 
 /* about */
 .about { background:var(--paper); position:relative; }
@@ -200,10 +197,8 @@ body { margin: 0; background: #121010; overflow-x: hidden; }
   .site *, .site *::before { animation:none !important; }
 }
 </style>
-<style>
-.pframe { position:relative; width:100%; aspect-ratio:4/5; overflow:hidden; background:var(--blush-2); }
-.pframe img { position:absolute; height:auto; transform:translate(-50%,-50%); display:block; }
-</style>
+<style>.pframe { position:relative; width:100%; aspect-ratio:4/5; overflow:hidden; background:var(--blush-2); }
+.pframe img { position:absolute; height:auto; transform:translate(-50%,-50%); display:block; }</style>
 </head>
 <body>
 <div class="site">
@@ -248,9 +243,9 @@ body { margin: 0; background: #121010; overflow-x: hidden; }
 
   <div class="stats">
     <div class="wrap">
-      <div class="stat reveal"><div class="n">5<sup>+</sup></div><div class="l">years across engineering, delivery and customer success</div></div>
+      <div class="stat reveal"><div class="n">5+</div><div class="l">years across engineering, delivery and customer success</div></div>
       <div class="stat reveal"><div class="n">$2.5M</div><div class="l">annual recurring revenue looked after</div></div>
-      <div class="stat reveal"><div class="n">70<sup>+</sup></div><div class="l">implementations delivered</div></div>
+      <div class="stat reveal"><div class="n">70+</div><div class="l">implementations delivered</div></div>
       <div class="stat reveal"><div class="n">96%</div><div class="l">renewal rate, up from 89%</div></div>
     </div>
   </div>
@@ -355,18 +350,18 @@ body { margin: 0; background: #121010; overflow-x: hidden; }
     </div>
     <div class="wrap">
       <ul class="tool-grid reveal" aria-label="Platforms and tools">
-        <li data-m="Sf">Salesforce<small>CRM &amp; CPQ</small></li>
-        <li data-m="Gs">Gainsight<small>Customer health</small></li>
-        <li data-m="Hs">HubSpot<small>CRM</small></li>
-        <li data-m="Ds">DocuSign<small>Contracts</small></li>
-        <li data-m="Tb">Tableau<small>Reporting</small></li>
-        <li data-m="M3">Microsoft 365<small>Integrations</small></li>
-        <li data-m="Id">Entra ID<small>SSO &amp; MFA</small></li>
-        <li data-m="Gl">Glean<small>AI agents</small></li>
-        <li data-m="Cc">Claude Code<small>Prototyping</small></li>
-        <li data-m="Pm">Postman<small>API testing</small></li>
-        <li data-m="Ji">Jira<small>Delivery</small></li>
-        <li data-m="Ad">Azure DevOps<small>Engineering</small></li>
+        <li>Salesforce<small>CRM &amp; CPQ</small></li>
+        <li>Gainsight<small>Customer health</small></li>
+        <li>HubSpot<small>CRM</small></li>
+        <li>DocuSign<small>Contracts</small></li>
+        <li>Tableau<small>Reporting</small></li>
+        <li>Microsoft 365<small>Integrations</small></li>
+        <li>Entra ID<small>SSO &amp; MFA</small></li>
+        <li>Glean<small>AI agents</small></li>
+        <li>Claude Code<small>Prototyping</small></li>
+        <li>Postman<small>API testing</small></li>
+        <li>Jira<small>Delivery</small></li>
+        <li>Azure DevOps<small>Engineering</small></li>
       </ul>
     </div>
     <div class="wrap">
